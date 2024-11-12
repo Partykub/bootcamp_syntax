@@ -5,9 +5,13 @@ class BookService
   end
 
   def add_book(id, title, author)
-    book1 = repository.find_by_id(id)
-    book = Book.new(id, title, author)
-    @repository.add(book)
+    existing_book = @repository.find_by_id(id)
+    if existing_book.nil?
+      book = Book.new(id, title, author)
+      @repository.add(book)
+    else
+      nil
+    end
   end
 
   def update_book(id, title:nil, author:nil)

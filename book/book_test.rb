@@ -19,16 +19,15 @@ class LibraryTest < Minitest::Test
 
   def test_add_book
     new_book = @service.add_book(1, "New Book", "New Author")
-    assert_equal "New Book", new_book.title
-    assert_equal "New Author", new_book.author
-    assert_equal 1, new_book.id
-    assert_equal 1, @repository.all.size
+     assert_equal "New Book", new_book.title
+     assert_equal "New Author", new_book.author
+     assert_equal 1, new_book.id
+     assert_equal 1, @repository.all.size
   end
 
   def test_find_by_id
     @service.add_book(1, "Book Title 1", "Author 1")
     found_book = @repository.find_by_id(1)
-
     assert_equal "Book Title 1", found_book.title
     assert_equal "Author 1", found_book.author
     assert_nil @repository.find_by_id(2)
