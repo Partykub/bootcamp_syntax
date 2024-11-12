@@ -12,6 +12,7 @@ class Book
     "ID: #{@id}, Title: #{@title}, Author: #{@author}"
   end
 
+  
   def title
     @title
   end

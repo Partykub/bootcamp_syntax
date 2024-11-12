@@ -48,5 +48,4 @@ class Statistics
     end
     return number
   end
-
 end

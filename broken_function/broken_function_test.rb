@@ -23,3 +23,4 @@ class TestMyFunctions < Minitest::Test
     assert_equal 'strawberry', res[1]  # longest word
   end
 end
+

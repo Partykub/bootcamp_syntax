@@ -38,3 +38,4 @@ class StatisticsTest < Minitest::Test
   end
 
 end
+
